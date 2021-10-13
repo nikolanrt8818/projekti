@@ -1,0 +1,27 @@
+img {
+  width: 100px;
+  height: 100px;
+  background-color: whitesmoke;
+}
+
+.col {
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+  display: inline-block;
+  background-color: red;
+  background-blend-mode: overlay;
+  background-size: contain;
+}
+
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#container {
+  text-align: center;
+  background-color: #333232;
+  color: whitesmoke;
+  padding: 10px;
+}
+/*# sourceMappingURL=style.css.map */

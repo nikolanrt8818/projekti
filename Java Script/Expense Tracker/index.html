@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+
+    <link rel="stylesheet" href="CSS/style.css">
+
+</head>
+<body>
+    
+    <div id="container">
+        <h2>Expense Tracker <img src="IMG/euro.png" alt="euro" width="20px" height="18px"></h2>
+
+        <h4>Add item:</h4>
+
+        <div class="main-div-form">
+            <div class="div-form">        
+                <label for="nameExp">Name:</label>
+                <input type="text" id="nameExp" placeholder="Expense name">  
+            </div>
+
+            <div class="div-form">        
+                <label for="dateExp">Date:</label>
+                <input type="date" id="dateExp">
+            </div>
+
+            <div class="div-form">        
+                <label for="amountExp">Amount:</label>
+                <input type="number" id="amountExp" size="3" min="0" placeholder="Expense amount">
+            </div>
+        </div>
+
+        <button type="button" id="add">Add Expense</button>
+
+        <div>
+            <table id="table">
+                <tr>
+                    <th id="thName">Name</th>
+                    <th id="thDate">Date</th>
+                    <th id="thAmount">Amount</th>
+                    <th id="thRemove"></th>
+                </tr>
+            </table>
+        </div>
+
+
+    </div>
+
+    <script src="JS/expense_tracker.js"></script>
+
+</body>
+</html>

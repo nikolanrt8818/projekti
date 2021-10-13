@@ -1,0 +1,63 @@
+$error_color: red;
+$fg_color: white;
+$bg_color: #142138;
+$btn_color: #46669e;
+$succ_color: lightgreen;
+
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.warningText {
+  color: $error_color;
+  font-weight: bold;
+}
+
+.succText {
+  color: $succ_color;
+  font-size: x-large;
+}
+
+.redStar {
+  color: $error_color !important;
+  display: inline;
+  float: none;
+}
+
+.container {
+  text-align: center;
+  background-color: $bg_color;
+  color: $fg_color;
+  padding: 20px;
+
+  input {
+    font-size: 12pt;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+  }
+}
+
+textarea {
+  resize: none;
+  border: none;
+}
+
+input {
+  &:focus {
+    outline: none;
+    border-color: $btn_color;
+    box-shadow: 0 0 3px $btn_color;
+  }
+}
+
+button {
+  background-color: $btn_color;
+  font-size: larger;
+  color: $fg_color;
+  border: none;
+
+  &:hover {
+    background-color: darken($color: $btn_color, $amount: 10);
+  }
+}

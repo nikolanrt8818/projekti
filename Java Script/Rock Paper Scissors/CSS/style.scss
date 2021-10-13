@@ -1,0 +1,57 @@
+$fg_color: white;
+$bg_color: darkslategrey;
+
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.col {
+  background-size: contain;
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  border: 1px solid black;
+  margin: 2px;
+  background-color: $fg_color;
+  margin-bottom: 10px;
+}
+
+.col-rock {
+  background-image: url("../IMG/rock.png");
+}
+
+.col-paper {
+  background-image: url("../IMG/paper.png");
+}
+
+.col-scissors {
+  background-image: url("../IMG/scissors.png");
+}
+
+.col-rock-opponent {
+  background-image: url("../IMG/rock.png");
+}
+
+.col-paper-opponent {
+  background-image: url("../IMG/paper.png");
+}
+
+.col-scissors-opponent {
+  background-image: url("../IMG/scissors.png");
+}
+
+.container {
+  text-align: center;
+  background-color: $bg_color;
+  color: $fg_color;
+  padding: 15px;
+}
+
+button {
+  color: $fg_color;
+  background-color: darkcyan;
+
+  &:hover {
+    background-color: $bg_color;
+  }
+}

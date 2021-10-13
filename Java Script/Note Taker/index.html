@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note Taker</title>
+
+    <link rel="stylesheet" href="CSS/style.css">
+
+</head>
+<body>
+
+    <div id="container">
+
+        <h2>Note Taker <img src="IMG/edit.png" alt="notes" width="20px" height="20px"></h2>
+
+        <h4>Add Note:</h4>
+
+        <textarea id="note" cols="80" rows="5" placeholder="Type your note here."></textarea> <br>
+
+        <button type="button" id="add">Add Note</button>
+
+
+        <div id="noteContainer">
+            
+
+        </div>
+
+
+        <div id="modal">
+            <span class="close">&times;</span>
+            <p id="modalText"></p>
+        </div>
+
+    </div>
+
+    
+    <script src="JS/note_container.js"></script>
+</body>
+</html>
