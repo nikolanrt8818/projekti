@@ -1,0 +1,26 @@
+$bg: #212121;
+$fg: white;
+
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  text-align: center;
+  background-color: $bg;
+  color: $fg;
+  padding: 20px;
+}
+
+#warningText {
+  font-weight: bold;
+  font-size: 16pt;
+}
+
+#btnGuess,
+#number,
+#easy,
+#hard {
+  font-size: 14pt;
+  margin: 5px;
+}
