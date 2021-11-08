@@ -1,0 +1,28 @@
+$hdr_bg: #800013;
+$hdr_fg: white;
+$bg: #fff;
+
+
+@mixin container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+@mixin button {
+  border-radius: 6px;
+  font-size: 14pt;
+  width: 25%;
+  padding: 6px;
+  border: none;
+  background-color: $hdr_bg;
+  color: $bg;
+  outline: none;
+
+  &:hover {
+    background-color: lighten($color: $hdr_bg, $amount: 10%);
+    border: 1px $hdr_bg;
+    transition: all ease-in-out 0.2s;
+  }
+}

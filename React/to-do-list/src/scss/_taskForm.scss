@@ -1,0 +1,49 @@
+.taskContainer {
+  @include container();
+
+  li {
+    padding: 0px 20px;
+  }
+  button:hover {
+    background-color: lighten($color: rgba($hdr_bg, 0.1), $amount: 10%);
+    border: 1px $hdr_bg;
+    transition: all ease-in-out 0.2s;
+  }
+}
+
+
+.taskForm {
+  width: 40%;
+  padding: 10px;
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  letter-spacing: 1px;
+
+  h1 {
+    color: black;
+  }
+
+  input {
+    width: 80%;
+    padding: 5px;
+    margin: 10px;
+    font-size: 12pt;
+    border: 1px solid black;
+    border-radius: 6px;
+    outline: none;
+
+    &:focus {
+      outline: none;
+      background-color: darken($color: white, $amount: 2);
+      &::placeholder {
+        color: transparent;
+      }
+    }
+  }
+  button {
+    @include button();
+  }
+}
