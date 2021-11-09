@@ -1,5 +1,8 @@
 import React from "react";
 import { useState } from "react";
+import Button from "@material-ui/core/Button";
+import Textfield from "@material-ui/core/Textfield";
+import PlaylistAddCheckIcon from "@material-ui/icons/PlaylistAddCheck";
 
 const TaskForm = ({ saveList }) => {
   const [task, setTask] = useState("");
@@ -15,15 +18,25 @@ const TaskForm = ({ saveList }) => {
         }}
       >
         <h1>Add task</h1>
-        <input
+        <Textfield
           type="text"
           placeholder="Type your task here"
           onChange={(event) => {
             setTask(event.target.value);
           }}
           value={task}
+          InputProps={{ disableUnderline: true }}
+          variant="outlined"
+          margin="Normal"
+          size="small"
         />
-      <button type="submit">Add</button>
+        <Button
+          startIcon={<PlaylistAddCheckIcon />}
+          type="submit"
+          style={{ backgroundColor: "#800013", color: "white", width: "20%" }}
+        >
+          Add
+        </Button>
       </form>
     </div>
   );

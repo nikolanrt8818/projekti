@@ -12,11 +12,11 @@ const TaskList = ({ tasks, deleteTask }) => (
     <List>
       {tasks.map((task, index) => (
         <ListItem key={index.toString()} dense buttons>
-          <Checkbox tabIndex={-1} disableRipple />
+          <Checkbox tabIndex={-1} disableRipple style={{color:"darkgreen"}}/>
           <ListItemText primary={task} />
           <ListItemSecondaryAction>
             <IconButton aria-label="Delete" onClick={() => deleteTask(index)}>
-              <DeleteIcon />
+              <DeleteIcon style={{color:"#800013"}}/>
             </IconButton>
           </ListItemSecondaryAction>
         </ListItem>
