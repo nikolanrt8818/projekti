@@ -2,10 +2,13 @@ import "./scss/App.scss";
 import Header from "./components/Header";
 import TaskForm from "./components/TaskForm";
 import TaskList from "./components/TaskList";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function App() {
   const [tasks, setTasks] = useState([]);
+  useEffect(() => {
+    document.title = "To Do List";
+  }, []);
 
   return (
     <div className="App">
@@ -19,10 +22,13 @@ function App() {
           }
         }}
       />
-      <TaskList tasks={tasks} deleteTask={(taskIndex) => {
-        const newTasks = tasks.filter((_, index) => index !== taskIndex);
-        setTasks(newTasks);
-      }} />
+      <TaskList
+        tasks={tasks}
+        deleteTask={(taskIndex) => {
+          const newTasks = tasks.filter((_, index) => index !== taskIndex);
+          setTasks(newTasks);
+        }}
+      />
     </div>
   );
 }
