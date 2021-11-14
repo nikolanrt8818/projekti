@@ -1,18 +1,18 @@
 import React from "react";
 
-const NoteList = ({ notes, deleteNote }) => {
+const NoteList = ({ note, deleteNote }) => {
   return (
     <div>
       <h3 className="heading">Notes</h3>
       <div className="noteContainer">
-        {notes.map((note, index) => (
-          <div key={index.toString()} className="noteItem">
+        {note.map((nt, index) => (
+          <div key={index} className="noteItem">
             <div className="noteHead">
-                <h3 >Note {index + 1}</h3>
-                <span onClick={()=> deleteNote(index)}>&times;</span>
+              <h3>{nt.head}</h3>
+              <span onClick={() => deleteNote(index)}>&times;</span>
             </div>
             <hr />
-            <p>{note}</p>
+            <p>{nt.text}</p>
           </div>
         ))}
       </div>

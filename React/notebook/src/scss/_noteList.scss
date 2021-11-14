@@ -1,48 +1,47 @@
 .noteContainer {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .noteItem {
-    width: 30%;
-    background-color: $c2;
-    color: $c6;
-    box-shadow: 4px 4px 4px -4px darken($color: $c2, $amount: 6);
-    padding: 15px;
-    margin-bottom: 15px;
-    border-radius: 3px;
+  width: 30%;
+  background-color: $c2;
+  color: $c6;
+  box-shadow: 4px 4px 4px -4px darken($color: $c2, $amount: 6);
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 3px;
 
-    hr {
-        opacity: 0.4;
-    }
+  hr {
+    opacity: 0.4;
+  }
 }
 
 .heading {
-    text-align: center;
-    margin-bottom: 15px;
-    font-size: 18pt;
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 18pt;
 }
 
 .noteHead {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 
-    h3 {
-        flex:1;
-    }
-    span {
-        flex:0;
-        padding: 0 5px;
-        line-height: 25px;
-        font-size: 24pt;
+  h3 {
+    flex: 1;
+  }
+  span {
+    flex: 0;
+    padding: 0 5px;
+    line-height: 25px;
+    font-size: 24pt;
 
-        &:hover {
-            background-color: darken($color: $c2, $amount: 10);
-            color: $c5;
-            transition: all 0.2s ease-in-out ;
-            cursor: pointer;
-        }
+    &:hover {
+      background-color: darken($color: $c2, $amount: 10);
+      color: $c5;
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
     }
-    
+  }
 }

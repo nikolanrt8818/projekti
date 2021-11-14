@@ -15,18 +15,21 @@ function App() {
     <div className="App">
       <Header />
       <Form
-        saveNote={(noteText) => {
-          const txt = noteText.trim();
-
-          if (txt.length > 0) {
-            setNotes([...notes, txt]);
-          }
+        saveNote={(noteHead, noteText) => {
+          const nt = {
+            head: noteHead.trim(),
+            text: noteText.trim(),
+          };
+          setNotes([...notes, nt]);
         }}
       />
-      <NoteList notes={notes} deleteNote={(noteIndex) => {
-        const newNotes = notes.filter((_,index) => index !== noteIndex);
-        setNotes(newNotes);
-      }}/>
+      <NoteList
+        note={notes}
+        deleteNote={(noteIndex) => {
+          const newNotes = notes.filter((_, index) => index !== noteIndex);
+          setNotes(newNotes);
+        }}
+      />
     </div>
   );
 }
