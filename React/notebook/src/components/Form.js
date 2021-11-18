@@ -37,6 +37,7 @@ const Form = ({ saveNote }) => {
         name="head"
         value={note.head}
         maxLength="100"
+        autocomplete="off"
       />
 
       <textarea
