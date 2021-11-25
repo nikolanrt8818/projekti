@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
+@import "./colors";
+@import "./main";
+
+* {
+    font-family: 'Karla', sans-serif;
+}
+
+body {
+  color: $c6;
+  background-image: url("../images/cozy.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
