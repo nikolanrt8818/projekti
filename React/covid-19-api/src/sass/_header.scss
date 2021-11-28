@@ -1,0 +1,15 @@
+.header {
+  @include flex();
+  background-color:transparent;
+  color: $col-6;
+  flex-direction: column;
+  padding: 30px;
+
+
+  h1 {
+    letter-spacing: 1.5px;
+    font-size: 40pt;
+    margin-bottom: 10px;
+  }
+
+}

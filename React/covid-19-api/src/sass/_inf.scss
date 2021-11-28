@@ -1,0 +1,29 @@
+.covid-panel {
+  @include flex();
+  width: 100%;
+  flex-direction: column;
+  margin-top: 40px;
+
+  h2 {
+    line-height: 5px;
+    margin-bottom: 20px;
+    margin-right: 5px;
+  }
+
+  img {
+    margin-bottom: 20px;
+  }
+}
+
+.total, .daily {
+  @include flex();
+  flex-direction: row;
+  padding: 10px;
+
+  p {
+    margin: 0px 10px;
+    font-size: 14pt;
+  }
+}
+
+

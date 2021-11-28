@@ -1,0 +1,13 @@
+$col-1: #15162c;
+$col-2: #212640;
+$col-3: #2f3659;
+$col-4: #70bf4b;
+$col-5: #81d959;
+$col-6: #fff;
+
+
+@mixin flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

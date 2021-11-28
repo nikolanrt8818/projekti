@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&display=swap");
+@import "./util";
+@import "./header";
+@import "./main";
+@import "./form";
+@import "./inf";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: $col-1;
+  color: $col-6;
+  background-image: url("../images/covid.jpg");
+  background-blend-mode: luminosity;
+  background-position: center right;
+}

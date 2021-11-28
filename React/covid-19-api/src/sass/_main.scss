@@ -1,0 +1,20 @@
+.main {
+  @include flex();
+  margin-top: 30px;
+}
+
+.panel {
+  @include flex();
+  flex-direction: column;
+  background-color: rgba($color: $col-2, $alpha: 0.9);
+  color: $col-6;
+  padding: 20px;
+  width: 60%;
+
+  h3 {
+    letter-spacing: 1.2px;
+  }
+  h4 {
+    letter-spacing: 0.8px;
+  }
+}
