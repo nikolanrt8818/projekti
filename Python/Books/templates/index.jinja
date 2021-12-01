@@ -1,0 +1,22 @@
+{% extends "./base.jinja" %}
+
+{% block title %}
+    <title>Books</title>
+{% endblock title %}
+
+{% block content %}
+
+    <div class="container">
+        <h1>Your Books:</h1>
+        {% for book in results %}
+        <ul class="booklist">
+            <li> <span class="bookName">{{book[0]}} ({{book[2]}})</span> <br>
+                by {{book[1]}} <br>
+                <small>Publisher: {{book[3]}}</small>
+             </li>
+
+        {% endfor %}
+        </ul>
+    </div>
+
+{% endblock content %}

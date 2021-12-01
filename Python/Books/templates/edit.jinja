@@ -1,0 +1,30 @@
+{% extends "base.jinja" %}
+
+{% block title %}
+    <title>Edit book: {{idBook}}</title>
+{% endblock title %}
+
+{% block content %}
+        <div class="formContainer">
+        
+            <h2>Edit Book</h2>
+        {% for b in results %}
+            <form action="" method="post" class="form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Type name here" value="{{b[0]}}">    
+                
+                <label for="author">Author:</label>
+                <input type="text" id="author" name="author" placeholder="Type author here" value="{{b[1]}}">    
+
+                <label for="year">Year</label>
+                <input type="number" id="year" name="year" placeholder="Type year here" value={{b[2]}}>    
+
+                <label for="publisher">Publisher</label>
+                <input type="text" id="publisher" name="publisher" placeholder="Type publisher here" value="{{b[3]}}"> 
+
+                <button type="submit">Save changes</button>   
+
+            </form>
+        {% endfor %}
+        </div>
+{% endblock content %}
