@@ -1,0 +1,46 @@
+.header {
+  @include flex(column);
+  background: linear-gradient(to bottom, $purple-3, $purple-1);
+  color: $white-1;
+  padding: 30px;
+  border-bottom-right-radius: 50% 30%;
+  border-bottom-left-radius: 50% 30%;
+  box-shadow: 0 4px 12px -3px lighten($color: $purple-1, $amount: 5);
+
+  h1 {
+    font-size: 36pt;
+    letter-spacing: 2px;
+
+    &:hover {
+      animation: wee 1s ease-in-out;
+      &::first-letter {
+        color: $green-2;
+      }
+    }
+  }
+  h3 {
+    font-size: 20pt;
+    letter-spacing: 1px;
+  }
+}
+
+@keyframes wee {
+  0% {
+    letter-spacing: 2px;
+  }
+  20% {
+    letter-spacing: 3px;
+  }
+  40% {
+    letter-spacing: 4px;
+  }
+  60% {
+    letter-spacing: 5px;
+  }
+  80% {
+    letter-spacing: 6px;
+  }
+  100% {
+    letter-spacing: 2px;
+  }
+}

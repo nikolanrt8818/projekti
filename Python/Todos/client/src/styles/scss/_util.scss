@@ -1,0 +1,22 @@
+$green-1: #75b436;
+$green-2: #79f200;
+$green-3: #53a500;
+$green-4: #9df249;
+$green-5: #397200;
+
+$purple-1: #361d59;
+$purple-2: #4d2773;
+$purple-3: #241d48;
+
+$black-1: #212121;
+$black-2: black;
+
+$white-1: #fff;
+$white-2: #dadce3;
+
+@mixin flex($direction) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
+}

@@ -1,0 +1,55 @@
+.tasks {
+  @include flex(column);
+  padding: 30px;
+}
+
+.list {
+  list-style-type: decimal;
+  font-size: 16pt;
+  li {
+    display: grid;
+    padding: 5px 15px 0px 15px;
+    grid-template-columns: repeat(4, 1fr);
+    border-bottom: 2px solid $purple-1;
+
+    input[type="checkbox"] {
+      transform: scale(1.5);
+      opacity: 0.5;
+      background-color: $green-2;
+      &:hover {
+        opacity: 1;
+      }
+      &:checked {
+        opacity: 1;
+      }
+    }
+    span {
+      font-size: 24pt;
+      color: rgba($color: red, $alpha: 0.5);
+      &:hover {
+        color: rgba($color: red, $alpha: 1);
+        cursor: pointer;
+      }
+    }
+
+    &:hover {
+      background-color: darken($color: $white-1, $amount: 3);
+      transition: all 0.3s ease-in;
+    }
+  }
+
+  .task,
+  .date {
+    margin-right: 20px;
+    grid-column: span 2;
+  }
+
+  .delete,
+  .tick {
+    margin: 0 auto;
+    padding: 0;
+    grid-row: span 2;
+    text-align: center;
+    line-height: 60px;
+  }
+}
