@@ -2,13 +2,13 @@
   @include flex(column);
   background: linear-gradient(to bottom, $purple-3, $purple-1);
   color: $white-1;
-  padding: 30px;
+  padding: 1rem;
   border-bottom-right-radius: 50% 30%;
   border-bottom-left-radius: 50% 30%;
   box-shadow: 0 4px 12px -3px lighten($color: $purple-1, $amount: 5);
 
   h1 {
-    font-size: 36pt;
+    font-size: 3rem;
     letter-spacing: 2px;
 
     &:hover {
@@ -17,10 +17,6 @@
         color: $green-2;
       }
     }
-  }
-  h3 {
-    font-size: 20pt;
-    letter-spacing: 1px;
   }
 }
 

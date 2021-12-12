@@ -1,14 +1,14 @@
 .tasks {
   @include flex(column);
-  padding: 30px;
+  padding: 1.8rem;
 }
 
 .list {
   list-style-type: decimal;
-  font-size: 16pt;
+  font-size: 1.2rem;
   li {
     display: grid;
-    padding: 5px 15px 0px 15px;
+    padding: 0.2rem 1rem 0 1rem;
     grid-template-columns: repeat(4, 1fr);
     border-bottom: 2px solid $purple-1;
 
@@ -40,7 +40,7 @@
 
   .task,
   .date {
-    margin-right: 20px;
+    margin-right: 2rem;
     grid-column: span 2;
   }
 
@@ -50,6 +50,6 @@
     padding: 0;
     grid-row: span 2;
     text-align: center;
-    line-height: 60px;
+    line-height: 3rem;
   }
 }
