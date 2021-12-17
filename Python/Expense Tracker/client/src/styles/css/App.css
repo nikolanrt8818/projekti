@@ -1,0 +1,86 @@
+@font-face {
+  font-family: "Raleway", sans-serif;
+  src: url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=swap");
+}
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #214B5D, #456D80);
+  padding: 1rem;
+}
+.header h1 {
+  font-size: clamp(2.5rem, 10vw, 3rem);
+}
+.header h4 {
+  font-size: clamp(1rem, 10vw, 1.5rem);
+}
+.header :is(h1, h4) {
+  color: #fff;
+  letter-spacing: 1.4px;
+  margin-bottom: 1rem;
+}
+
+.form,
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  padding: 2rem;
+}
+.form input,
+.form select {
+  font-size: 1rem;
+  padding: 0.4rem;
+  margin-bottom: 1rem;
+  border-radius: 0.3rem;
+  border: none;
+  border-bottom: 2px solid #214B5D;
+  caret-color: #214B5D;
+}
+.form input:focus-visible,
+.form select:focus-visible {
+  background-color: #f5f5f5;
+  outline: none;
+  transition: all 0.3s;
+}
+.form label {
+  margin-bottom: 0.3rem;
+}
+.form button {
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.3rem;
+  border: none;
+  outline: none;
+  background-color: #214B5D;
+  color: #fff;
+}
+.form button:focus-visible {
+  box-shadow: 0 2px 10px #456D80;
+}
+.form button:hover {
+  background-color: #456D80;
+  box-shadow: 0 2px 10px #456D80;
+  transform: scale(0.96);
+  transition: all 0.3s;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fff;
+  color: #000;
+  font-family: "Raleway", sans-serif;
+}
+
+/*# sourceMappingURL=App.css.map */
