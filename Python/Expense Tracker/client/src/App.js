@@ -1,6 +1,7 @@
 import "./styles/scss/App.scss";
 import Header from "./components/Header";
 import Form from "./components/Form";
+import ExpenseList from "./components/ExpenseList";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
         subtitle="Tracking expenses made easy"
       />
       <Form />
+      <ExpenseList />
     </div>
   );
 }

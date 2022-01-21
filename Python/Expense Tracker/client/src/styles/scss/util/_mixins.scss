@@ -17,6 +17,12 @@
     background-color: $backgroundColor;
     outline: none;
     transition: all 0.3s;
+    &::placeholder {
+      color: transparent;
+    }
+  }
+  &::placeholder {
+    font-style: italic;
   }
 }
 

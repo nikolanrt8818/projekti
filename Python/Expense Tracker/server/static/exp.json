@@ -1,16 +1,1 @@
-[
-  {
-    "id_expense": 1,
-    "description": "Bills",
-    "date": "2021-12-15",
-    "amount": 200.0,
-    "currency": "eur"
-  },
-  {
-    "id_expense": 2,
-    "description": "Guitar",
-    "date": "2021-12-20",
-    "amount": 500.0,
-    "currency": "eur"
-  }
-]
+[{"id_expense": 1, "description": "Bills", "date": "2021-12-15", "amount": 200.0, "currency": "\u20ac"}, {"id_expense": 2, "description": "Guitar", "date": "2021-12-20", "amount": 500.0, "currency": "\u20ac"}]
