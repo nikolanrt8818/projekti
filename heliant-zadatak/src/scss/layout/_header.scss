@@ -1,0 +1,10 @@
+@use "../utility/" as ut;
+
+.header {
+  @include ut.flex(row, center, center, 0rem);
+  padding: 1rem 2rem;
+  background-color: ut.$main-1;
+  h2 {
+    color: ut.$neutral-1;
+  }
+}

@@ -1,0 +1,46 @@
+@use "../utility/" as ut;
+
+.addModal {
+  @include ut.flex(row, center, center, 0);
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba($color: ut.$neutral-2, $alpha: 0.5);
+
+  &__content {
+    padding: 2rem;
+    background-color: ut.$neutral-1;
+  }
+
+  &__form {
+    font-size: 0;
+    @include ut.flex(row, center, center, 1rem);
+  }
+}
+
+.form-container {
+  div {
+    margin-bottom: 1rem;
+    small {
+      font-style: italic;
+      font-weight: 300;
+      color: ut.$neutral-2;
+    }
+  }
+  textarea {
+    resize: none;
+  }
+}
+
+input {
+  font-size: 1rem;
+}
+
+.error {
+  margin-bottom: 1rem;
+  font-weight: 500;
+  font-style: italic;
+  color: crimson;
+}

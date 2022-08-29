@@ -1,0 +1,22 @@
+@mixin base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    &::before,
+    &::after {
+      box-sizing: border-box;
+    }
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@mixin flex($fd, $jc, $ai, $g) {
+  display: flex;
+  justify-content: $jc;
+  align-items: $ai;
+  gap: $g;
+}

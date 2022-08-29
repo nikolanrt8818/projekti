@@ -1,0 +1,62 @@
+@use "../utility/" as ut;
+
+.container {
+  margin: auto;
+  font-family: inherit;
+  padding: 2rem;
+  width: 70%;
+}
+
+.task {
+  padding: 1rem 2rem;
+  margin-bottom: 0.5rem;
+  background-color: ut.$neutral-3;
+  border-bottom: 1px solid darken($color: ut.$neutral-3, $amount: 10);
+
+  &__editing {
+    @include ut.flex(column, flex-start, center, 0.5rem);
+    margin-top: 0.5rem;
+    font-size: 1.25rem;
+    
+    .edit {
+      &:hover {
+        color: ut.$main-2;
+        transition: all 0.3s;
+      }
+    }
+
+    .delete {
+      &:hover {
+        color: crimson;
+        transition: all 0.3s;
+      }
+    }
+  }
+}
+
+.add {
+  padding: 0.5rem;
+  margin-right: 0.5rem;
+  font-size: 1.25rem;
+  background-color: ut.$main-1;
+  color: ut.$neutral-1;
+  border-radius: 3px;
+  border: none;
+  outline: none;
+
+  &:hover {
+    background-color: ut.$main-2;
+    box-shadow: 0 0 4px ut.$main-2;
+    transition: all 0.3s;
+  }
+
+  &--close {
+    background-color: crimson;
+
+    &:hover {
+      background-color: darken($color: crimson, $amount: 10);
+      box-shadow: 0 0 4px crimson;
+      transition: all 0.3s;
+    }
+  }
+}

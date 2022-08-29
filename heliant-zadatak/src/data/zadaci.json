@@ -1,0 +1,23 @@
+[
+  {
+    "naziv": "Zadatak 1",
+    "rok": "2022-08-30",
+    "opis": "Opis zadatka broj 1.",
+    "prioritet": "Nizak",
+    "resen": false
+  },
+  {
+    "naziv": "Zadatak 2",
+    "rok": "2022-08-31",
+    "opis": "Opis zadatka broj 2.",
+    "prioritet": "Srednji",
+    "resen": true
+  },
+  {
+    "naziv": "Zadatak 3",
+    "rok": "2022-08-31",
+    "opis": "Opis zadatka broj 3.",
+    "prioritet": "Visok",
+    "resen": false
+  }
+]
