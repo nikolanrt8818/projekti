@@ -1,0 +1,57 @@
+@use "../utility/" as ut;
+
+.footer {
+  padding: 1rem 6rem;
+  background-color: ut.$neutral-3;
+  color: ut.$neutral-1;
+  border-top: 1px solid darken($color: ut.$neutral-3, $amount: 5);
+
+  &__content {
+    @include ut.flex(column, center, center);
+
+    h3 {
+      font-family: ut.$font-heading;
+      color: ut.$main-5;
+      a {
+        color: ut.$main-5;
+        text-decoration: none;
+        &:hover {
+          color: lighten($color: ut.$main-5, $amount: 5);
+          cursor: pointer;
+          transition: all 0.3s ease-in-out;
+        }
+        &:active {
+          color: ut.$main-1;
+        }
+      }
+    }
+
+    small {
+      color: ut.$neutral-5;
+    }
+  }
+}
+
+.social {
+  @include ut.flex(row, center, center);
+  margin: 0.5rem 0;
+  list-style-type: none;
+  li {
+    margin: 0 0.5rem;
+    font-size: 1.25rem;
+    a {
+      text-decoration: none;
+      color: ut.$neutral-5;
+      &:hover {
+        color: ut.$main-5;
+        transition: all 0.3s ease-in-out;
+      }
+      //   &:visited {
+      //     color: ut.$main-4;
+      //     &:hover {
+      //       color: ut.$main-5;
+      //     }
+      //   }
+    }
+  }
+}

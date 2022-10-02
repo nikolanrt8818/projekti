@@ -1,0 +1,145 @@
+@use "../utility/" as ut;
+
+table {
+  margin: auto;
+  width: 100%;
+  background-color: rgba($color: ut.$neutral-3, $alpha: 0.9);
+  color: ut.$neutral-1;
+
+  th {
+    @include ut.flex(row, flex-start, center);
+    padding: 0.25rem;
+  }
+  tr {
+    display: grid;
+    grid-template-columns: 1fr 3fr 2fr 2fr 2fr 2fr;
+    padding: 0.5rem 0.75rem;
+    border-bottom: 2px solid rgba($color: ut.$neutral-2, $alpha: 0.5);
+  }
+
+  td {
+    @include ut.flex(row, flex-start, center);
+
+    a {
+      @include ut.flex(row, flex-start, center);
+      justify-items: self-start;
+      gap: 1rem;
+      text-decoration: none;
+      color: ut.$neutral-1;
+      &:hover {
+        color: ut.$main-5;
+        transition: all 0.3s ease-in-out;
+      }
+      &:active {
+        color: ut.$main-1;
+      }
+    }
+
+    img {
+      display: block;
+      height: 30px;
+      width: 30px;
+    }
+    span {
+      text-transform: uppercase;
+      color: ut.$neutral-5;
+    }
+  }
+}
+
+.coin-info {
+  @include ut.flex(column, flex-start, baseline);
+}
+
+@mixin searchStyle() {
+  padding: 0.5rem;
+  font-size:1.25rem;
+  background-color: ut.$neutral-4;
+  color: ut.$neutral-1;
+  border: none;
+  outline: none;
+}
+.searchContainer {
+  @include ut.flex(row, center, center);
+  padding: 1rem 3rem 2rem 3rem;
+  width: 100%;
+  background-color: rgba($color: ut.$neutral-3, $alpha: 0.9);
+}
+
+.search {
+  @include ut.flex(row, center, center);
+  input {
+    @include searchStyle();
+    border-bottom: 2px solid transparent;
+    caret-color: ut.$main-5;
+
+    &:focus {
+      border-bottom: 2px solid ut.$main-5;
+      transition: all 0.3s ease-in-out;
+      &::placeholder {
+        color: transparent;
+        transition: all 0.3s ease-in-out;
+      }
+    }
+  }
+  span {
+    background-color: transparent;
+    color: ut.$neutral-1;
+    margin-left: -2rem;
+  }
+}
+
+.glass {
+  @include ut.flex(row, center, center);
+  color: ut.$neutral-5;
+}
+
+.pages {
+  background-color: rgba($color: ut.$neutral-3, $alpha: 0.9);
+  padding: 1rem 0;
+  ul {
+    @include ut.flex(row, center, center);
+    gap: 2rem;
+    align-content: center;
+    font-weight: 600;
+    list-style-type: none;
+  }
+
+  input {
+    padding: 0.25rem 0;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    background-color: inherit;
+    color: ut.$neutral-1;
+    border: none;
+    border-bottom: 2px solid rgba($color: ut.$neutral-1, $alpha: 0.5);
+    &:focus {
+      border-bottom: 2px solid rgba($color: ut.$neutral-1, $alpha: 1);
+      outline: none;
+    }
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+      appearance: none;
+    }
+  }
+
+  button {
+    font-size: 2rem;
+    background-color: transparent;
+    color: ut.$neutral-1;
+    border: none;
+    outline: none;
+    &:hover {
+      color: ut.$main-5;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+  }
+}
+
+.chart {
+  @include ut.flex(row, flex-start, center);
+  height: 3rem;
+  width: 12rem;
+}

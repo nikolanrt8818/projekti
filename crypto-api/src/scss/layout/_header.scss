@@ -1,0 +1,47 @@
+@use "../utility/" as ut;
+
+.header {
+  @include ut.flex(row, space-between, center);
+  padding: 1rem 8rem;
+  font-family: ut.$font-heading;
+  background-color: ut.$neutral-3;
+  color: ut.$neutral-1;
+  border-bottom: 1px solid darken($color: ut.$neutral-3, $amount: 5);
+
+  &__left {
+    h2 {
+      margin-bottom: 0.3rem;
+      color: ut.$main-5;
+
+      a {
+        text-decoration: none;
+        color: ut.$main-5;
+        &:hover {
+          color: lighten($color: ut.$main-5, $amount: 5);
+          cursor: pointer;
+          transition: all 0.3s ease-in-out;
+        }
+        &:active {
+          color: ut.$main-1;
+        }
+      }
+    }
+  }
+
+  &__right {
+    select,
+    option {
+      @include ut.font(ut.$font-main, 1rem, 600, 1px);
+    }
+    select {
+      padding: 0.25rem 1rem;
+      background-color: ut.$neutral-3;
+      color: ut.$main-5;
+      border: none;
+      border-bottom: 3px solid ut.$main-5;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}

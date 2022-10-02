@@ -1,0 +1,31 @@
+@mixin base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    &::before, &::after {
+      box-sizing: border-box;
+    }
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  img {
+    display: block;
+    max-width: 100%;
+  }
+}
+
+@mixin flex($fd, $jc, $ai) {
+  display: flex;
+  flex-direction: $fd;
+  justify-content: $jc;
+  align-items: $ai;
+}
+
+@mixin font($ff, $fs, $fw, $ls) {
+  font-family: $ff;
+  font-size: $fs;
+  font-weight: $fw;
+  letter-spacing: $ls;
+}

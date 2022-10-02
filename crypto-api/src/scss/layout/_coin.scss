@@ -1,0 +1,115 @@
+@use "../utility/" as ut;
+
+.coin {
+  height: 100vh;
+  padding: 2rem;
+  background-color: ut.$neutral-4;
+  &__head {
+    @include ut.flex(row, flex-start, center);
+    gap: 1.2rem;
+
+    div {
+      @include ut.flex(column, flex-start, baseline);
+    }
+
+    h1 {
+      font-weight: 400;
+    }
+
+    span {
+      text-transform: uppercase;
+      color: ut.$neutral-5;
+    }
+
+    img {
+      &:hover {
+        transform: rotate(360deg);
+        transition: all 1s ease-in-out;
+      }
+    }
+  }
+
+  &__body {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    padding: 2rem 0;
+    border-top: 2px solid rgba($color: ut.$neutral-2, $alpha: 0.5);
+    border-bottom: 2px solid rgba($color: ut.$neutral-2, $alpha: 0.5);
+    p {
+        a {
+          text-decoration: none;
+          color: ut.$main-5;
+          &:hover {
+            color: lighten($color: ut.$main-5, $amount: 5);
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+          }
+          &:active {
+            color: ut.$main-1;
+          }
+        }
+        small {
+          font-style: italic;
+          color: ut.$neutral-5;
+        }
+    }
+  }
+  &__desc {
+    margin: 1rem 0 2rem 0;
+    a {
+      text-decoration: none;
+      color: ut.$main-5;
+      &:hover {
+        color: lighten($color: ut.$main-5, $amount: 5);
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+      }
+      &:active {
+        color: ut.$main-1;
+      }
+    }
+  }
+}
+
+.add-info {
+  @include ut.flex(column, flex-start, baseline);
+  gap: 1.5rem;
+  span {
+    font-weight: 600;
+    color: ut.$neutral-1;
+  }
+}
+
+.backLink {
+  font-size: 3rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: rgba($color: ut.$neutral-1, $alpha: 0.5);
+  &:hover {
+    color: ut.$neutral-1;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  &:active {
+    color: rgba($color: ut.$neutral-1, $alpha: 0.5);
+  }
+}
+
+.chartContainer {
+  min-height: auto;
+  select,
+  option {
+    @include ut.font(ut.$font-main, 1rem, 600, 1px);
+  }
+  select {
+    padding: 0.25rem 1rem;
+    background-color: ut.$neutral-3;
+    color: ut.$main-5;
+    border: none;
+    border-bottom: 3px solid ut.$main-5;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

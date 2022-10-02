@@ -1,0 +1,143 @@
+@use "../utility/" as ut;
+
+.carousel {
+  position: relative;
+  padding: 1rem 3rem;
+  background-color: rgba($color: ut.$neutral-3, $alpha: 0.9);
+  color: ut.$neutral-1;
+
+  h3 {
+    @include ut.flex(row, flex-start, center);
+    gap: 0.5rem;
+    span {
+      font-weight: 600;
+      color: ut.$main-5;
+    }
+  }
+
+  &__button {
+    position: absolute;
+    top: 50%;
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+    background: none;
+    color: rgba($color: ut.$neutral-1, $alpha: 0.5);
+    border: none;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    &.prev {
+      margin-right: 1.25rem;
+      left: 1rem;
+    }
+    &.next {
+      margin-left: 1.25rem;
+      right: 1rem;
+    }
+    &:hover {
+      cursor: pointer;
+      color: ut.$neutral-1;
+      transition: all 0.3s ease-in-out;
+    }
+    &:active {
+      color: rgba($color: ut.$neutral-1, $alpha: 0.5);
+    }
+  }
+}
+
+.cards[active="0"] {
+  display: none;
+}
+
+.cards[active="1"] {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+  animation: carousel 0.5s ease-in-out;
+}
+
+.card {
+  @include ut.flex(column, flex-start, baseline);
+  padding: 1rem 0 1rem 1.5rem;
+  background-color: ut.$neutral-4;
+  border: 2px solid ut.$neutral-4;
+  &__img {
+    height: 50px;
+    width: 50px;
+    filter: brightness(80%);
+  }
+  &__info {
+    margin-top: 1rem;
+    div {
+      @include ut.flex(row, center, center);
+      gap: 0.5rem;
+    }
+  }
+  span {
+    font-weight: 600;
+    text-transform: uppercase;
+    color: ut.$neutral-5;
+  }
+
+  &:hover {
+    cursor: pointer;
+    border: 2px solid ut.$main-3;
+    transition: all 0.6s ease-out;
+    .card__img {
+      filter: brightness(100%);
+      transition: all 0.6s ease-in-out;
+    }
+  }
+}
+
+.capChange {
+  font-weight: 600;
+}
+
+.up {
+  color: ut.$chart-1;
+}
+.down {
+  color: ut.$chart-2;
+}
+
+.dashes {
+  text-align: center;
+}
+
+.dash {
+  padding: 0.1rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.dash[active="0"] {
+  color: ut.$neutral-5;
+  opacity: 0.4;
+}
+
+.dash[active="1"] {
+  color: ut.$neutral-1;
+  opacity: 1;
+  transition: all 0.75s ease-in-out;
+}
+
+.cardLink {
+  text-decoration: none;
+  color: ut.$neutral-1;
+}
+
+@keyframes carousel {
+  from {
+    opacity: 0;
+    filter: blur(20px);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0px);
+  }
+}
