@@ -1,0 +1,55 @@
+@use "../utility/" as ut;
+
+.toggle {
+  display: inline-block;
+  position: relative;
+  width: 3.5rem;
+  height: 2rem;
+
+  input {
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+}
+
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: ut.$main-5;
+  transition: 0.4s;
+  cursor: pointer;
+
+  &::before {
+    position: absolute;
+    height: 1.5rem;
+    width: 1.5rem;
+    left: 4px;
+    bottom: 4px;
+    background-color: ut.$main-6;
+    transition: 0.4s;
+    content: "";
+  }
+}
+
+.round {
+  border-radius: 2rem;
+  &::before {
+    border-radius: 50%;
+  }
+}
+
+input:checked + .slider {
+  background-color: ut.$main-3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px ut.$main-3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(1.5rem);
+}

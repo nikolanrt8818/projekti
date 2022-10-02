@@ -12,6 +12,11 @@
   html {
     scroll-behavior: smooth;
   }
+
+  img {
+    display: block;
+    max-width: 100%;
+  }
 }
 
 @mixin flex($fd, $jc, $ai, $g) {
@@ -19,4 +24,10 @@
   justify-content: $jc;
   align-items: $ai;
   gap: $g;
+}
+
+@mixin font($ff, $fw, $fs) {
+  font-family: $ff;
+  font-weight: $fw;
+  font-style: $fs;
 }

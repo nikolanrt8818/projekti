@@ -1,0 +1,11 @@
+@use "../utility/" as ut;
+
+.header {
+  @include ut.flex(row, space-between, center, 0);
+  padding: 1rem 5rem;
+  background-color: ut.$main-1;
+  color: ut.$main-6;
+  h1 {
+    @include ut.font(inherit, 400, italic);
+  }
+}

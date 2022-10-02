@@ -1,0 +1,12 @@
+@use "./utility/" as ut;
+@use "./layout/" as lay;
+@include ut.base;
+
+body {
+  font-family: ut.$font-heading;
+  background-color: ut.$light-1;
+}
+
+.dark-content {
+  background-color: ut.$dark-2;
+}
